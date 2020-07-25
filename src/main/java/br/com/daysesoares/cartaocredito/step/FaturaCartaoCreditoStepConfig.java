@@ -29,6 +29,7 @@ public class FaturaCartaoCreditoStepConfig {
 				.get("faturaCartaoCreditoStep")
 				.<FaturaCartaoCredito, FaturaCartaoCredito> chunk(1)
 				.reader(new FaturaCartaoCreditoReader(lerTransacoesReader))
+				.processor(carregarDadosClienteProcessor)
 				.writer(escreverFaturaCartaoCredito)
 				.build();
 	}

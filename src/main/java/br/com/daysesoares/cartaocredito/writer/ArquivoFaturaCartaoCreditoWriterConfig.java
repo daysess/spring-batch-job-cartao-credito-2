@@ -65,8 +65,8 @@ public class ArquivoFaturaCartaoCreditoWriterConfig {
 			@Override
 			public String aggregate(FaturaCartaoCredito faturaCartaoCredito) {
 				StringBuilder writer = new StringBuilder();
-				//writer.append(String.format("Nome: %s \n", faturaCartaoCredito.getCliente().getNome()));
-				//writer.append(String.format("Endereco: %s\n\n\n", faturaCartaoCredito.getCliente().getEndereco()));
+				writer.append(String.format("Nome: %s \n", faturaCartaoCredito.getCliente().getNome()));
+				writer.append(String.format("Endereco: %s\n\n\n", faturaCartaoCredito.getCliente().getEndereco()));
 				writer.append(String.format("Fatura completa do cartão: %d\n", faturaCartaoCredito.getCartaoCredito().getNumeroCartaoCredito()));
 				writer.append("----------------------------------------------------------------------------------");
 				writer.append("DATA DESCRICAO VALOR \n");
